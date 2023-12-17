@@ -1,0 +1,331 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  }
+
+  
+  * {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style:none;
+    height:auto;
+    /* me fastidia la sección de categorías de instrumentos */
+  }
+    
+  /* CSS media queries & responsive web design tutorial for beginners dave gray*/
+  
+   /* styles comunes a todos los media queries */
+  
+   body {
+    /* min-height:100svh; */
+    display:flex;
+    flex-direction: row;
+    --fondoClarito:white;
+    --fondoClarito2:rgb(251, 239, 249);
+    --fondoClarito3:rgb(236, 176, 225);
+    --fondoClarito4:rgb(212, 196, 211);
+    --fondoOscuro: black;
+  
+    --letraClarita: white;
+    --letraOscura: black;
+    --letraColor: orange;
+    --colorHover: rgb(253, 255, 125);
+    /* sugerencia del profe (Daniel) */
+    overflow-x: hidden; 
+    background-color:rgb(201, 221, 255);
+    height:fit-content;
+  }
+  
+  .filters {
+    background-color:var(--fondoClarito3);
+    width: max(20svw, 300px);
+    flex-direction: column;
+    text-align: left;
+    border:var(--fondoOscuro) 3px solid;
+    padding: 5px;
+    margin:7px;
+    width: max(20svw, 300px);
+    flex-direction: column;
+    text-align: left;
+    height: fit-content;
+    }
+  
+  .filter {
+    background-color:var(--fondoClarito2);
+    margin: 10px;
+    padding:10px;
+    width: 210px;
+    height: fit-content;
+   }
+  
+  .products {
+    display:flex;
+    flex-direction:row;
+    text-align:center;
+    padding: 5px;
+    margin-right:10px;
+    margin-top:7px;
+    background-color:var(--fondoClarito3);
+    border:var(--fondoOscuro) 3px solid;
+    flex-wrap:wrap;
+    width: 80svw;
+    height: fit-content;
+   
+    } 
+  
+  .product {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right:5px;
+    margin: 6px;
+    height: 330px; 
+    background-color:var(--fondoClarito);
+    border-radius: 6% 6% 6% 6% / 6% 6% 6% 6%;
+    height: fit-content;
+   }
+  
+   .product:hover {
+    background-color:var(--colorHover);
+   }
+  
+  .starImage {
+    height: 15px;
+  }
+  
+  .image {
+    height:100px;
+  }
+  
+  #slide {
+    margin:2px;
+  }
+  
+  #textInput {
+    margin:6px;
+    margin-top:10px;
+  }
+  
+  .mySelect {
+    margin-top: 10px;
+  } 
+
+
+  /* 
+********************************************
+media query for pc
+******************************************** 
+*/
+@media screen and (min-width:544px){
+
+
+html {
+  height:500px;
+}
+  body {
+   display: flex;
+   flex-direction: row;
+   justify-content:flex-start;
+   align-items:flex-start; 
+   height:fit-content;
+   }
+    
+
+  .mobileInvisible{
+    display:block;
+  }  
+
+.filters {
+padding: 5px;
+width: max(20svw, 300px);
+flex-direction: column;
+text-align: left;
+height: auto;
+
+padding: 5px;
+margin:7px;
+border: 3px solid grey;
+}
+
+.filter {
+margin: 10px;
+padding:10px;
+width: 210px;
+} 
+
+.products {
+display:flex;
+flex-direction:row;
+align-items:flex-start;
+align-content:flex-start;
+/* padding: 5px;
+margin-right:10px;
+margin-top:7px; */
+flex-wrap:wrap;
+width: 80svw;
+height: auto;
+
+padding: 5px;
+margin-top:7px;
+margin-left:7px;
+margin-bottom:7px;
+border: 3px solid rgb(113, 113, 113);
+
+} 
+
+.product {
+/* padding-top: 5px;
+padding-left: 5px;
+padding-right:5px;
+margin: 6px; */
+height: auto; 
+background-color:var(--fondoClarito);
+border-radius: 6% 6% 6% 6% / 6% 6% 6% 6%;;
+font-size: medium;
+
+}
+
+/* .product:hover {
+background-color:var(--colorHover);
+}
+
+.starImage {
+height: 15px;
+}
+
+.image {
+height:100px;
+}
+
+#slide {
+margin:2px;
+}
+
+#textInput {
+margin:6px;
+margin-top:10px;
+}
+
+.mySelect {
+margin-top: 10px;
+} */
+
+}
+
+
+/* 
+**************************
+media query for mobile
+************************** 
+*/
+@media screen and (min-width: 20px){
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items:flex-start; 
+  height:fit-content;
+  }
+
+
+.mobileInvisible{
+  display:none;
+}
+
+.filters {
+  background-color:var(--fondoClarito2);
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  margin:0;
+  border:none;
+  }
+
+.filter {
+  background-color:var(--fondoClarito2);
+  width: auto;
+  height:auto;
+  border: 0.5px solid grey;
+  margin:1px;
+  margin-bottom:5px;
+  padding:3px;
+
+ }
+
+  .mySelect {
+    width:auto;
+  }
+
+  .slider {
+    width:80%;
+    }
+
+.products {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:flex-start; 
+  padding: 5px;
+  margin-right:10px;
+  margin-top:0px;
+ flex-wrap:wrap;
+  width: 99svw;
+  border:none;
+    } 
+
+ 
+
+
+.product {
+  /* padding-top: 5px;
+  padding-left: 5px;
+  padding-right:5px;
+  margin: 6px; */
+  height: auto;
+  background-color:var(--fondoClarito);
+  border-radius: 6% 6% 6% 6% / 6% 6% 6% 6%;;
+ }
+
+ .product:hover {
+  background-color:var(--colorHover);
+ }
+
+
+
+
+
+/* .starImage {
+  height: 15px;
+}
+
+.image {
+  height:100px;
+}
+
+#slide {
+  margin:2px;
+}
+
+#textInput {
+  margin:6px;
+  margin-top:10px;
+}
+
+.mySelect {
+  margin-top: 10px;
+} */
+
+}
+
+
+  

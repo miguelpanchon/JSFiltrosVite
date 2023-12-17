@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>test malo</title>
+</head>
+
+<body>
+  <aside class="filters">
+    <!-- filtro 1 -->
+    <section class="filter">
+      <p class="mobileInvisible"><strong>Filtro: </strong></p>
+      <p>elija la marca que le interesa</p>
+      <select name="mySelect" id="mySelect" class="mySelect">
+        <option value="" selected>Todas</option>
+      </select>
+    </section>
+
+    <!-- input box filter -->
+    <section class="filter">
+      <p class="mobileInvisible"><strong>Filtro:</strong></p>
+      <p>PRECIO máx?</p>
+      <input id="textInput" type="text" style="width: 50px;">
+      <!-- slidecontainer -->
+      <input id="slide" type="range" min="1" max="10000" value="10000" class="slider">
+      <input id="BTNfilter" type="button" value="Filtrar">
+    </section>
+    <!-- clean filters -->
+    <section class="filter">
+      <input type="button" value="Limpiar filtros" id="eliminateFilters">
+      <p class="mobileInvisible">(Para eliminar los filtros)</p>
+    </section>
+  </aside>
+
+  <main class="products">
+    <!-- inyectar js aqui -->
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
